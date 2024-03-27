@@ -10,12 +10,11 @@
   background-color: #121111;
 }
 body {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 header {
-  height: 200px;
-  width: 1170px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,26 +34,17 @@ header {
   width: 20px;
 }
 .theme {
-  position: relative;
-  width: 90px;
-  height: 100%;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  width: 150px;
 }
 .theme img {
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 28%;
-  width: 100%;
+  width: 150px;
 }
 .darkTheme {
   background-color: #121111;
   color: white !important;
 }
 .main {
-  width: 1170px;
+  max-width: 1170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +54,7 @@ header {
   position: fixed;
   z-index: 9;
   bottom: 30px;
-  right: 30px;
+  right: 1%;
   width: 60px;
   height: 60px;
 }
@@ -88,7 +78,7 @@ header {
   text-decoration: none;
 }
 .nav > img {
-  width: 250px;
+  max-width: 250px;
   margin-right: 4em;
   margin-left: 10px;
 }
@@ -126,7 +116,7 @@ header {
   font-family: 'Oswald', sans-serif;
 }
 .sliderWide {
-  width: 98vw;
+  width: 100vw;
   background-color: #f26739;
   color: #000;
 }
@@ -256,7 +246,7 @@ header {
   height: 100%;
 }
 .stat-wide {
-  width: 98vw;
+  width: 100vw;
   height: 150px;
   background-color: #f26739;
   display: flex;
@@ -271,7 +261,7 @@ header {
 .stat {
   display: flex;
   justify-content: space-between;
-  width: 1170px;
+  max-width: 1170px;
   padding: 0 98px;
   margin: 40px 0;
   position: relative;
@@ -294,8 +284,9 @@ header {
   height: 3px;
   background-color: #000;
   position: absolute;
-  top: 55px;
-  left: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .stat-1 p {
   font-size: 18px;
@@ -483,7 +474,7 @@ header {
 }
 .widePrice {
   background-color: #f26739;
-  width: 98vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -495,7 +486,7 @@ header {
 .box-price {
   display: flex;
   flex-direction: column;
-  width: 1170px;
+  max-width: 1170px;
   padding: 10px;
 }
 .box-price > .card {
@@ -519,7 +510,130 @@ header {
 .contacts .invert {
   filter: invert(75%);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
+  .nav-unit {
+    font-size: 18px;
+  }
+  .nav > img {
+    margin-right: 2rem;
+  }
+  .stat {
+    gap: 20px;
+    padding: 0px 20px;
+  }
+  .stat-1 {
+    width: 100%;
+  }
+  .nav {
+    flex-direction: column;
+    height: auto;
+    margin: 15px;
+  }
+}
+@media (max-width: 798px) {
+
+  header {
+    height: 100%;
+    margin: 10px 0px;
+  }
+  .phone-head p{
+    font-size: 14px;
+  }
+  .phone-head img {
+    width: 25px;
+  }
+  .theme {
+    width: 75px;
+  }
+  .theme img {
+    width: 75px;
+    position: static;
+  }
+  .nav {
+    height: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav >.nav-units {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+  .nav > img {
+    width: 175px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .nav-unit {
+    margin: 0px;
+    font-size: 14px;
+    padding: 5px;
+  }
+  .nav-unit::after {
+    top: 15px;
+    left: 5px;
+    height: 1px;
+    width: 0%;
+  }
+  .owl-carousel {
+    height: 200px;
+  }
+  .slide {
+    padding: 20px 0 0 0;
+  }
+  .owl-carousel .owl-prev span {
+    font-size: 30px;
+  }
+  .slider {
+    height: 240px;
+  }
+  .owl-carousel .owl-stage-outer {
+    height: 190px;
+}
+.slide .title::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  .owl-nav {
+    width: 250px;
+  }
+  .title-two {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .stat-wide > div {
+    font-size: 20px;
+  }
+  .widePrice {
+    font-size: 12px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  .uslugi .row-box,
+  .about .row-box{
+    padding: 20px;
+    flex-direction: column;
+  }
+  .uslugi .text-we.about-txt,
+  .about .text-we.about-txt {
+    width: 100%;
+    padding: 0;
+  }
+  .uslugi .text-we.about-left,
+  .about .text-we.about-left {
+    width: 100%;
+    padding: 0;
+  }
+  .uslugi h3 {
+    text-align: center;
+}
+.price .card{
+  width: 200px
+}
+} 
+/* @media (max-width: 1024px) {
   .box-price {
     width: 900px;
   }
@@ -771,121 +885,4 @@ header {
     width: 600px;
   }
 }
-@media (max-width: 320px) {
-  body {
-    width: 320px;
-  }
-  header {
-    height: 100%;
-    max-width: 320px;
-    margin: 10px 0px;
-  }
-  .phone-head p{
-    font-size: 14px;
-  }
-  .phone-head img {
-    width: 25px;
-  }
-  .theme {
-    width: 75px;
-  }
-  .theme img {
-    width: 75px;
-    position: static;
-  }
-  .main {
-    width: 320px;
-  }
-  .nav {
-    height: 100%;
-    max-width: 320px;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .nav >.nav-units {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 15px;
-}
-  .nav > img {
-    width: 175px;
-    margin: 0px;
-    padding: 0px;
-  }
-  .nav-unit {
-    margin: 0px;
-    font-size: 14px;
-    padding: 5px;
-  }
-  .nav-unit::after {
-    top: 15px;
-    left: 5px;
-    height: 1px;
-    width: 0%;
-  }
-  .owl-carousel {
-    height: 200px;
-  }
-  .owl-carousel .owl-prev span {
-    font-size: 30px;
-  }
-  .slider {
-    width: 280px;
-    height: 240px;
-  }
-  .owl-carousel .owl-stage-outer {
-    height: 190px;
-}
-.slide .title::before {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-  .owl-nav {
-    width: 250px;
-  }
-  .title-two {
-    font-size: 20px;
-    padding: 10px 0;
-  }
-  .about,
-  .uslugi {
-    width: 300px;
-  }
-  .stat-wide > div {
-    font-size: 20px;
-  }
-  .widePrice {
-    font-size: 12px;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-  .box-price {
-    width: 300px;
-  }
-  .sliderWide {
-    width: 100vw;
-  }
-  .uslugi .row-box,
-  .about .row-box{
-    padding: 20px;
-    flex-direction: column;
-  }
-  .uslugi .text-we.about-txt,
-  .about .text-we.about-txt {
-    width: 100%;
-    padding: 0;
-  }
-  .uslugi .text-we.about-left,
-  .about .text-we.about-left {
-    width: 100%;
-    padding: 0;
-  }
-  .uslugi h3 {
-    text-align: center;
-}
-.price .card{
-  width: 200px
-}
-}
+*/
