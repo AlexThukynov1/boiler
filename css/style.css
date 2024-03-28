@@ -126,21 +126,18 @@ header {
 }
 .owl-carousel .owl-dots {
   position: absolute;
-  bottom: 5%;
-  left: 47%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .owl-carousel .owl-prev {
-  position: absolute;
-  top: 30%;
-  left: 20%;
+
 }
 .owl-carousel .owl-prev span {
   font-size: 120px;
 }
 .owl-carousel .owl-next {
-  position: absolute;
-  top: 30%;
-  right: 20%;
+
 }
 .owl-carousel .owl-next span {
   font-size: 120px;
@@ -173,7 +170,7 @@ header {
   color: black;
 }
 .slide .title {
-  font-size: 48;
+  font-size: 48px;
   font-weight: 700;
   position: relative;
   padding-bottom: 20px;
@@ -265,9 +262,10 @@ header {
   padding: 0 98px;
   margin: 40px 0;
   position: relative;
+  gap: 15px;
 }
 .stat-1 {
-  width: 168px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,8 +505,32 @@ header {
   align-items: center;
   padding: 5px;
 }
+.owl-carousel.owl-loaded {
+  position: relative;
+}
 .contacts .invert {
   filter: invert(75%);
+}
+.owl-nav button.owl-prev {
+  position: absolute;
+  top: 0;
+  left: 5%;
+}
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+.owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 0;
+  transform: translate(0%, -50%);
+  margin-top: 0;
+}
+.owl-theme .owl-nav {
+  margin-top: 0;
 }
 @media (max-width: 1030px) {
   .nav-unit {
@@ -537,16 +559,16 @@ header {
     margin: 10px 0px;
   }
   .phone-head p{
-    font-size: 14px;
+    font-size: 18px;
   }
   .phone-head img {
-    width: 25px;
+    width: 35px;
   }
   .theme {
-    width: 75px;
+    width: 100px;
   }
   .theme img {
-    width: 75px;
+    width: 100px;
     position: static;
   }
   .nav {
@@ -560,13 +582,25 @@ header {
     gap: 15px;
 }
   .nav > img {
-    width: 175px;
+    width: 235px;
     margin: 0px;
     padding: 0px;
   }
+  .uslugi .text-we.about-txt p {
+    text-align: center;
+  }
+  ul li {
+    text-align-last: left;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
   .nav-unit {
     margin: 0px;
-    font-size: 14px;
+    font-size: 18px;
     padding: 5px;
   }
   .nav-unit::after {
@@ -582,8 +616,9 @@ header {
     padding: 20px 0 0 0;
   }
   .owl-carousel .owl-prev span {
-    font-size: 30px;
+    font-size: 35px;
   }
+
   .slider {
     height: 240px;
   }
@@ -595,18 +630,18 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-  .owl-nav {
-    width: 250px;
-  }
+.owl-nav {
+  top: 30%;
+}
   .title-two {
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px 0;
   }
   .stat-wide > div {
     font-size: 20px;
   }
   .widePrice {
-    font-size: 12px;
+    font-size: 16px;
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -620,11 +655,14 @@ header {
   .about .text-we.about-txt {
     width: 100%;
     padding: 0;
+    text-align: center;
   }
   .uslugi .text-we.about-left,
   .about .text-we.about-left {
     width: 100%;
     padding: 0;
+    text-align: center;
+    max-height: 100%;
   }
   .uslugi h3 {
     text-align: center;
@@ -632,7 +670,42 @@ header {
 .price .card{
   width: 200px
 }
+.box-price > .card {
+  font-size: 10px;
+}
+.box-img {
+  width: 300px;
+}
+.contacts {
+  align-items: center;
 } 
+.stat-1 h3 {
+  font-size: 20px;
+}
+.slide .title  {
+  font-size: 25px;
+}
+.slide p {
+  font-size: 15px;
+  padding: 20px 0 20px 0;
+  line-height: 1.5;
+}
+.owl-carousel .owl-next span,
+.owl-carousel .owl-prev span{
+  font-size: 65px;
+}
+} 
+@media (max-width: 465px) {
+  .stat-1 h3 {
+    font-size: 14px;
+  }
+  .box-img {
+    width: 200px;
+  }
+  .contacts div {
+    flex-direction: column;
+  }
+}
 /* @media (max-width: 1024px) {
   .box-price {
     width: 900px;
