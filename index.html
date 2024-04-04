@@ -12,8 +12,33 @@
 	<!--link rel="icon" href="https://proservice.net.ua/favicon.ico" type="image/x-icon"-->
   </head>
   <body class="themeHandler">
-    
-    <div class="main">
+    <header>
+      <div class="nav" id="home">
+        <img src="./img/LOGO-Light.png" class="logo" alt="">
+        <img src="./img/LOGO-Dark.png" class="logo hidden" alt="">
+
+            <div class="phone-head">
+              <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a>
+              <div>
+                <a href="https://t.me/pro_service_kyiv" target="_blank"><img src="./img/Telegram_logo.svg" alt="Telegram icon"></a>
+                <a href="viber://add?number=%2B380634143132"  target="_blank"><img src="./img/Viber-Icon.svg" alt="Viber icon"></a>
+              </div>
+            </div>
+
+            <div class="theme">
+              <img src="./img/DAY.png" class="themeSwitcher" alt="">
+              <img src="./img/NIGHT.png" class="themeSwitcher hidden" alt="">
+            </div>
+
+            <div class="nav-units">
+              <a href="#uslugi" class="scrollto"><div class="nav-unit">Види послуг</div></a>
+              <a href="#price" class="scrollto"><div class="nav-unit">Ціни</div></a>
+              <a href="#contacts" class="scrollto"><div class="nav-unit">Контакти</div></a>
+              <a href="#about" class="scrollto"><div class="nav-unit">Про нас</div></a>
+            </div>
+      </div>
+        </header>
+    <footer class="main">
       <a href="#home"><img src="./img/up.png" alt="" class="btn-up"></a>
       <!-- REQUEST-FORM -->
       <!-- ===================================================================== -->
@@ -44,32 +69,7 @@
       </div> -->
       <!-- HEADER -->
       <!-- ===================================================================== -->
-        <header>
-          <div class="nav" id="home">
-            <img src="./img/LOGO-Light.png" class="logo" alt="">
-            <img src="./img/LOGO-Dark.png" class="logo hidden" alt="">
 
-                <div class="phone-head">
-                  <p>+38 (063) 414 31 32</p>
-                  <div>
-                    <img src="./img/Telegram_logo.svg" alt="">
-                    <img src="./img/Viber-Icon.svg" alt="">
-                  </div>
-                </div>
-
-                <div class="theme">
-                  <img src="./img/DAY.png" class="themeSwitcher" alt="">
-                  <img src="./img/NIGHT.png" class="themeSwitcher hidden" alt="">
-                </div>
-
-                <div class="nav-units">
-                  <a href="#uslugi" class="scrollto"><div class="nav-unit">Види послуг</div></a>
-                  <a href="#price" class="scrollto"><div class="nav-unit">Ціни</div></a>
-                  <a href="#contacts" class="scrollto"><div class="nav-unit">Контакти</div></a>
-                  <a href="#about" class="scrollto"><div class="nav-unit">Про нас</div></a>
-                </div>
-          </div>
-            </header>
       <!-- SLIDER -->
       <!-- ===================================================================== -->
         <div class="section sliderWide">
@@ -267,21 +267,49 @@
     </div>
 
     <div class="widePrice">
-      Допоможемо з підбором бойлера &nbsp+38 (063) 414 31 32
+      Допоможемо з підбором бойлера <br>+38 (063) 414 31 32
     </div>
     <!-- ===================================================================== -->
 
     <!-- CONTACTS -->
     <!-- ===================================================================== -->
-    <div class="contacts" id="contacts">
-      <div><div><img src="./img/phone-ringing-505.svg" class="cont-img" alt=""><p>Телефон: +38 (063) 414 31 32 </p></div><div><img src="./img/Telegram_logo.svg" alt=""><p>Telegram</p></div><div><img src="./img/Viber-Icon.svg" alt=""><p>Viber</p></div></div>
-      <div><img src="./img/Location.svg" class="cont-img" alt=""> &nbsp місто Київ та область</div>
-      <div><img src="./img/mail.svg" class="cont-img" alt=""> &nbsp Email: proservice.ukr@gmail.com</div>
-    </div>
-    <!-- ===================================================================== -->
+    <footer class="contacts" id="contacts">
 
-    
-    </div>
+
+<div class="footer-contacts-wrapper">
+            <div class="footer-link-wrapper">
+              <img src="./img/phone-ringing-505.svg" class="cont-img" alt="">
+              <p>Телефон: <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a> </p>
+            </div>
+  
+            <div class="footer-link-wrapper">
+              <img src="./img/Telegram_logo.svg" alt="">
+                <a href="https://t.me/pro_service_kyiv" target="_blank"><p>Telegram</p></a>
+            </div>
+  
+               <div class="footer-link-wrapper">
+                  <img src="./img/Viber-Icon.svg" alt="">
+                  <a href="viber://add?number=%2B380634143132" target="_blank"><p>Viber</p></a>
+               </div>
+</div>
+
+
+        <div class="footer-link-wrapper">
+          <img src="./img/Location.svg" class="cont-img" alt="">
+          <span>Київ</span>
+        </div>
+
+        <div class="footer-link-wrapper">
+          <img src="./img/mail.svg" class="cont-img" alt="">
+          <span>Email: <a href="mailto:proservice.ukr@gmail.com">proservice.ukr@gmail.com</a>
+          </span>
+        </div>
+      
+      
+      </footer>
+
+
+    </main>
     <!-- MAIN end -->
 
     <!-- Google tag (gtag.js) -->
