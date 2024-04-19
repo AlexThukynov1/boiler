@@ -68,18 +68,60 @@ for (var i = 0; i < linkNav.length; i++) {
         }
     }, false);
 }
-// ==================================================================================================
+// Отримати посилання на елементи DOM
+var modal = document.getElementById("contactFormModal");
+var openBtn = document.getElementById("openFormBtn");
+var closeBtn = document.getElementsByClassName("close")[0];
+var form = document.getElementById("contactForm");
 
-// REQUEST FORM
-   (function (d, w, c) {
-       (w[c] = w[c] || []).push({formId:189483,host:"formdesigner.com.ua",formHeight:100, el: "form_189483_1",center: 1,scroll: 0});
-       var s = d.createElement("script"), g = "getElementsByTagName";
-       s.type = "text/javascript"; s.charset="UTF-8"; s.async = true;
-       s.src = (d.location.protocol == "https:" ? "https:" : "http:")+"//formdesigner.com.ua/js/iform.js?v=0.0.3";
-       var h=d[g]("head")[0] || d[g]("body")[0];
-       h.appendChild(s);
-   })(document, window, "fdforms");
-// ==================================================================================================
+// Відкриття форми при кліку на кнопку
+openBtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Закриття форми при кліку на хрестик
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Закриття форми, якщо користувач клікнув поза неї
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Відправка форми на сервер
+function submitForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  // Створення об'єкту FormData для відправки даних на сервер
+  var formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('message', message);
+
+  // Відправлення POST-запиту на сервер PHP
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'send_email.php', true);
+  xhr.onload = function() {
+    // Додаткові дії після успішної відправки форми, якщо потрібно
+    modal.style.display = "none"; // Закриття форми
+    alert('Your message has been sent successfully.');
+  };
+  xhr.onerror = function() {
+    // Обробка помилки відправки
+    alert('Error sending your message. Please try again later.');
+  };
+  xhr.send(formData);
+}
 
 
 

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 	<!--link rel="icon" href="https://proservice.net.ua/favicon.ico" type="image/x-icon"-->
+  
   </head>
   <body class="themeHandler">
     <header>
@@ -37,20 +39,26 @@
               <a href="#about" class="scrollto"><div class="nav-unit">Про нас</div></a>
             </div>
       </div>
-        </header>
-    <footer class="main">
+    </header>
+    <main class="main">
       <a href="#home"><img src="./img/up.png" alt="" class="btn-up"></a>
-      <!-- REQUEST-FORM -->
-      <!-- ===================================================================== -->
-      <!-- <div class="request">
-        <div class="request-mini">
-          ЗВ'ЯЗАТИСЯ З НАМИ
-        </div>
 
-        <div class="request-full">
-          <div id="form_189483_1"></div>
+      <div id="buttonWrapper" class="button-wrapper">
+        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
+      </div>
+
+      <div id="contactFormModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Contact Us</h2>
+          <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="button" onclick="submitForm()">Send</button>
+          </form>
         </div>
-      </div> -->
+      </div>
       <!-- SIDE-NAVIGATION -->
       <!-- ===================================================================== -->
       <!-- <div class="side-nav">
@@ -86,7 +94,7 @@
             </a></div>
 
             <div class="slide slide-1 item"><a href="#price">
-              <h1 class="title">Демократичні та антикризісні ціни!</h1>
+              <h1 class="title">Демократичні та антикризисні ціни!</h1>
               <p>Ми обслуговуємо бойлери за доступними цінами <br> в Києві та області</p>
             </a></div>
 
@@ -260,7 +268,8 @@
           </div>
 
           <div class="text-we about-txt">
-              <p>Команда фахівців надасть послуги з монтажу, ремонту та обслуговування вашої побутової техніки. Майстер виконає роботи якісно та з гарантією.</p>
+              <p>Команда майстрів з ремонту бойлерів спеціалізується на обслуговуванні, ремонті та встановленні бойлерів різних типів та марок. Наші фахівці мають досвід і знання, необхідні для діагностики та усунення несправностей, проведення технічного обслуговування та вирішення будь-яких проблем, пов'язаних з роботою бойлерів. Команда майстрів з ремонту бойлерів забезпечує якісне обслуговування та ремонт, щоб забезпечити безпечну та ефективну роботу вашого обладнання.
+              </p>
           </div>
       </div>
 
@@ -273,45 +282,45 @@
 
     <!-- CONTACTS -->
     <!-- ===================================================================== -->
-    <footer class="contacts" id="contacts">
-
-
-<div class="footer-contacts-wrapper">
-            <div class="footer-link-wrapper">
-              <img src="./img/phone-ringing-505.svg" class="cont-img" alt="">
-              <p>Телефон: <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a> </p>
-            </div>
-  
-            <div class="footer-link-wrapper">
-              <img src="./img/Telegram_logo.svg" alt="">
-                <a href="https://t.me/pro_service_kyiv" target="_blank"><p>Telegram</p></a>
-            </div>
-  
-               <div class="footer-link-wrapper">
-                  <img src="./img/Viber-Icon.svg" alt="">
-                  <a href="viber://add?number=%2B380634143132" target="_blank"><p>Viber</p></a>
-               </div>
-</div>
-
-
-        <div class="footer-link-wrapper">
-          <img src="./img/Location.svg" class="cont-img" alt="">
-          <span>Київ</span>
-        </div>
-
-        <div class="footer-link-wrapper">
-          <img src="./img/mail.svg" class="cont-img" alt="">
-          <span>Email: <a href="mailto:proservice.ukr@gmail.com">proservice.ukr@gmail.com</a>
-          </span>
-        </div>
-      
-      
-      </footer>
+    
 
 
     </main>
     <!-- MAIN end -->
+    <footer class="contacts" id="contacts">
 
+
+      <div class="footer-contacts-wrapper">
+                  <div class="footer-link-wrapper">
+                    <img src="./img/phone-ringing-505.svg" class="cont-img" alt="">
+                    <p>Телефон: <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a> </p>
+                  </div>
+        
+                  <div class="footer-link-wrapper">
+                    <img src="./img/Telegram_logo.svg" alt="">
+                      <a href="https://t.me/pro_service_kyiv" target="_blank"><p>Telegram</p></a>
+                  </div>
+        
+                     <div class="footer-link-wrapper">
+                        <img src="./img/Viber-Icon.svg" alt="">
+                        <a href="viber://add?number=%2B380634143132" target="_blank"><p>Viber</p></a>
+                     </div>
+      </div>
+      
+      
+              <div class="footer-link-wrapper">
+                <img src="./img/Location.svg" class="cont-img" alt="">
+                <span>Київ</span>
+              </div>
+      
+              <div class="footer-link-wrapper">
+                <img src="./img/mail.svg" class="cont-img" alt="">
+                <span>Email: <a href="mailto:proservice.ukr@gmail.com">proservice.ukr@gmail.com</a>
+                </span>
+              </div>
+            
+            
+    </footer>
     <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M904K2S14S"></script>
 	<script>
