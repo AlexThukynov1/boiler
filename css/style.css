@@ -20,7 +20,7 @@ body {
   margin: 20px;
 }
 .form-active-button {
-  padding: 5px 15px 10px;
+  padding:10px 15px;
   background-color: #f26739;
   color: #fff;
   border-color:#f26739;
@@ -28,11 +28,13 @@ body {
   vertical-align: middle;
   border-width: 0;
   font-weight: 700;
+  line-height: 1.2;
+  font-size: 25px;
 }
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 99999;
   left: 0;
   top: 0;
   width: 100%;
@@ -44,17 +46,50 @@ body {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 20px;
+  padding: 20px 20px 40px;
   border: 1px solid #888;
   width: 80%;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  align-self: self-end;
+}
+.submit-button {
+  background-color: #f26739;
+  color: #fff;
+  border-color:#f26739;
+  padding: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  border-width: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.form-input {
+  width: 250px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.text-input {
+  border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
 }
 
 .close:hover,
@@ -255,7 +290,7 @@ header {
   display: flex;
   padding: 20px;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
 }
 .about .text-we.about-left,
 .uslugi .text-we.about-left {
@@ -583,6 +618,13 @@ header {
   transform: translate(0%, -50%);
   margin-top: 0;
 }
+.footer-link-wrapper {
+  display: flex;
+  gap: 5px;
+}
+.wtapp {
+  width: 30px;
+}
 .owl-theme .owl-nav {
   margin-top: 0;
 }
@@ -772,6 +814,16 @@ header {
   }
   .nav-unit {
     font-size: 12px;
+  }
+  .form-input {
+    width: 200px;
+  }
+  .form-title {
+    text-align: center;
+    font-size: 15px;
+  }  
+  .form-active-button {
+    font-size: 15px;
   }
 }
 /* @media (max-width: 1024px) {

@@ -24,6 +24,7 @@
               <div>
                 <a href="https://t.me/pro_service_kyiv" target="_blank"><img src="./img/Telegram_logo.svg" alt="Telegram icon"></a>
                 <a href="viber://add?number=%2B380634143132"  target="_blank"><img src="./img/Viber-Icon.svg" alt="Viber icon"></a>
+                <a href="https://wa.me/380634143132"  target="_blank"><img src="./img/whatsapp.png" alt="Whatsapp icon"></a>
               </div>
             </div>
 
@@ -43,19 +44,15 @@
     <main class="main">
       <a href="#home"><img src="./img/up.png" alt="" class="btn-up"></a>
 
-      <div id="buttonWrapper" class="button-wrapper">
-        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
-      </div>
-
       <div id="contactFormModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h2>Contact Us</h2>
+          <h2 class="form-title">Замовити консультацію</h2>
           <form id="contactForm">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="button" onclick="submitForm()">Send</button>
+            <input class="form-input text-input" type="text" id="name" name="name" placeholder="Ім'я" required>
+            <input class="form-input text-input" type="email" id="email" name="email" placeholder="Номер телефона" required>
+            <textarea class="form-input" id="message" name="message" placeholder="Марка бойлера" required></textarea>
+            <button class="submit-button" type="button" onclick="submitForm()">Відправити</button>
           </form>
         </div>
       </div>
@@ -95,7 +92,7 @@
 
             <div class="slide slide-1 item"><a href="#price">
               <h1 class="title">Демократичні та антикризисні ціни!</h1>
-              <p>Ми обслуговуємо бойлери за доступними цінами <br> в Києві та області</p>
+              <p>Ми обслуговуємо бойлери за доступними цінами <br> в Києві </p>
             </a></div>
 
           </div>          
@@ -141,7 +138,9 @@
           <div class="box-img"><img src="./img/Boiler.png" alt=""></div>
         </div>
       </div>
-
+      <div id="buttonWrapper" class="button-wrapper">
+        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
+      </div>
        <!-- KOTLY ===================================================================== -->
        <h2 class="title-two">Коли необхідно обслуговувати та ремонтувати електрокотел?</h2>
        <div class="row-box">
@@ -162,15 +161,17 @@
            <div class="box-img"><img src="./img/kotel.png" alt=""></div>
          </div>
        </div>
-
+       <div id="buttonWrapper" class="button-wrapper">
+        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
+      </div>
     </div>
     
     
     <!-- PRICE -->
     <!-- ===================================================================== -->
     <div class="widePrice" id="price">
-      <p>МИ ОБСЛУГОВУЄМО БОЙЛЕРИ ЗА ДОСТУПНИМИ ЦІНАМИ В КИЄВІ ТА ОБЛАСТІ</p>
-    </div>      
+      <p>МИ ОБСЛУГОВУЄМО БОЙЛЕРИ ЗА ДОСТУПНИМИ ЦІНАМИ В КИЄВІ</p>
+    </div> 
     <div class="box-price">
       <div class="price">
         <a href="https://formdesigner.com.ua/form/view/189483" target="_blank">
@@ -230,6 +231,9 @@
         </a>
       
       </div>
+      <div id="buttonWrapper" class="button-wrapper">
+        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
+      </div>
       <div class="card">
         <p>* Гарантійний термін на виконані роботи – 90 календарних днів.</p>
         <p>** Для збереження гарантійних умов на ємність від виробника рекомендується встановлення редуктора тиску в систему подачі води. Купується окремо.</p>
@@ -272,7 +276,9 @@
               </p>
           </div>
       </div>
-
+      <div id="buttonWrapper" class="button-wrapper">
+        <button id="openFormBtn" class="form-active-button">Залишити заявку</button>
+      </div>
     </div>
 
     <div class="widePrice">
@@ -305,6 +311,10 @@
                         <img src="./img/Viber-Icon.svg" alt="">
                         <a href="viber://add?number=%2B380634143132" target="_blank"><p>Viber</p></a>
                      </div>
+                     <div class="footer-link-wrapper">
+                      <img class="wtapp" src="./img/whatsapp.png" alt="">
+                      <a href="https://wa.me/380634143132" target="_blank"><p>Whatsapp</p></a>
+                   </div>
       </div>
       
       

@@ -114,7 +114,6 @@ function submitForm() {
   xhr.onload = function() {
     // Додаткові дії після успішної відправки форми, якщо потрібно
     modal.style.display = "none"; // Закриття форми
-    alert('Your message has been sent successfully.');
   };
   xhr.onerror = function() {
     // Обробка помилки відправки
