@@ -827,8 +827,11 @@ img.phone-cont-img {
   .footer-contacts-wrapper {
     flex-direction: column;
   }
+  .nav >.nav-units {
+    gap:5px
+  }
   .nav-unit {
-    font-size: 12px;
+    font-size: 15px;
   }
   .form-input {
     width: 200px;
