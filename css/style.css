@@ -19,6 +19,9 @@ body {
   align-items: center;
   margin: 20px;
 }
+.cont-img {
+  animation: shake 1.5s linear 1.5s infinite;
+}
 .form-active-button {
   padding:10px 15px;
   background-color: #f26739;
@@ -110,6 +113,15 @@ header {
   font-size: 20px;
   font-weight: 800;
 }
+.phone {
+  display: flex;
+  gap: 5px
+}
+img.phone-cont-img {
+  animation: shake 1.5s linear 1.5s infinite;
+  width: 25px;
+}
+.phone
 .phone-head > div {
   padding-top: 5px;
   padding-left: 10px;
@@ -177,22 +189,15 @@ header {
   position: relative;
   margin: 5px 10px;
   color: #4f4e4e;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
+  border: solid 1px #ccc;
+  line-height: 1.2;
+  border-width: 0px 0px 2px 0px;
+  padding: 5px;
 }
-.nav-unit::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 2px;
-  width: 0%;
-  background-color: #4f4e4e;
-}
-.nav-unit:hover::after {
-  transition: 0.5s;
-  width: 70%;
+.nav-unit:hover{
+  border-color:#f26739
 }
 .section {
   width: 100%;
@@ -658,6 +663,11 @@ header {
     display: flex;
     gap: 5px;
   }
+  .phone-head {
+    flex-direction: column;
+    align-items:center;
+    gap: 5px;
+  }
   .phone-head >>> a p{
     font-size: 18px;
     color:#4f4e4e;
@@ -669,6 +679,9 @@ header {
   }
   .phone-head img {
     width: 35px;
+  }
+  img.phone-cont-img {
+    width: 25px;
   }
   .theme {
     width: 100px;
@@ -708,6 +721,7 @@ header {
     margin: 0px;
     font-size: 18px;
     padding: 5px;
+
   }
   .nav-unit::after {
     bottom: 0;
@@ -727,7 +741,7 @@ header {
   }
 
   .slider {
-    height: 240px;
+    height: 215px;
   }
   .owl-carousel .owl-stage-outer {
     height: 190px;
@@ -1079,3 +1093,27 @@ header {
   }
 }
 */
+
+@keyframes shake { 
+  0% { transform: rotate(0deg); } 
+  10% { transform: rotate(-3deg); } 
+  20% { transform: rotate(3deg); } 
+  30% { transform: rotate(0deg); } 
+  40% { transform: rotate(3deg); } 
+  50% { transform: rotate(-3deg); } 
+  60% { transform: rotate(0deg); } 
+  70% { transform: rotate(-3deg); } 
+  80% { transform: rotate(3deg); } 
+  90% { transform: rotate(0deg); } 
+  100% { transform: rotate(-3deg); }
+}
+@media(hover:hover) {
+  .nav-unit:hover{
+    border-color:#f26739
+  }
+}
+@media(hover:none) {
+  .nav-unit:active{
+    border-color:#f26739
+  }
+}

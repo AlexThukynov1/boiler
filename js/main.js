@@ -70,13 +70,16 @@ for (var i = 0; i < linkNav.length; i++) {
 }
 // Отримати посилання на елементи DOM
 var modal = document.getElementById("contactFormModal");
-var openBtn = document.getElementById("openFormBtn");
+var openBtn = document.querySelector(".themeHandler");
 var closeBtn = document.getElementsByClassName("close")[0];
 var form = document.getElementById("contactForm");
-
+console.log(openBtn)
 // Відкриття форми при кліку на кнопку
-openBtn.onclick = function() {
-  modal.style.display = "block";
+openBtn.onclick = function(e) {
+  if(e.target.id === 'openFormBtn'){
+    modal.style.display = "block";
+  }
+  
 }
 
 // Закриття форми при кліку на хрестик
@@ -96,6 +99,7 @@ function submitForm() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
+  var address = document.getElementById("address").value;
 
   if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
     alert("Please fill out all fields.");
@@ -107,6 +111,7 @@ function submitForm() {
   formData.append('name', name);
   formData.append('email', email);
   formData.append('message', message);
+  formData.append('address', address);
 
   // Відправлення POST-запиту на сервер PHP
   var xhr = new XMLHttpRequest();
@@ -120,6 +125,7 @@ function submitForm() {
     alert('Error sending your message. Please try again later.');
   };
   xhr.send(formData);
+  form.reset()
 }
 
 

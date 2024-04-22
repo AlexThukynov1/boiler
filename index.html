@@ -20,7 +20,10 @@
         <img src="./img/LOGO-Dark.png" class="logo hidden" alt="">
 
             <div class="phone-head">
-              <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a>
+              <div class="phone">
+                <img src="./img/phone-ringing-505.svg" class=" phone-cont-img" alt="">
+                <a  href="tel:+380634143132"><span class="link-text">+38 (063) 414 31 32</span></a>
+              </div>
               <div>
                 <a href="https://t.me/pro_service_kyiv" target="_blank"><img src="./img/Telegram_logo.svg" alt="Telegram icon"></a>
                 <a href="viber://add?number=%2B380634143132"  target="_blank"><img src="./img/Viber-Icon.svg" alt="Viber icon"></a>
@@ -51,7 +54,8 @@
           <form id="contactForm">
             <input class="form-input text-input" type="text" id="name" name="name" placeholder="Ім'я" required>
             <input class="form-input text-input" type="email" id="email" name="email" placeholder="Номер телефона" required>
-            <textarea class="form-input" id="message" name="message" placeholder="Марка бойлера" required></textarea>
+            <input class="form-input text-input" type="text" id="address" name="address" placeholder="Адреса" required>
+            <textarea class="form-input" id="message" name="message" placeholder="Марка, модель бойлера, короткий опис поломки" required></textarea>
             <button class="submit-button" type="button" onclick="submitForm()">Відправити</button>
           </form>
         </div>
@@ -319,12 +323,12 @@
       
       
               <div class="footer-link-wrapper">
-                <img src="./img/Location.svg" class="cont-img" alt="">
+                <img src="./img/Location.svg" class="" alt="">
                 <span>Київ</span>
               </div>
       
               <div class="footer-link-wrapper">
-                <img src="./img/mail.svg" class="cont-img" alt="">
+                <img src="./img/mail.svg" class="" alt="">
                 <span>Email: <a href="mailto:proservice.ukr@gmail.com">proservice.ukr@gmail.com</a>
                 </span>
               </div>
