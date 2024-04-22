@@ -701,7 +701,8 @@ img.phone-cont-img {
     gap: 15px;
 }
   .nav > img {
-    width: 235px;
+    width: 100%;
+    max-width: 100%;
     margin: 0px;
     padding: 0px;
   }
