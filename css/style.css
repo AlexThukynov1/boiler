@@ -19,17 +19,27 @@ body {
   align-items: center;
   margin: 20px;
 }
+.button-wrapper-fixed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9;
+  bottom: 95px;
+  right: 0;
+}
 .cont-img {
   animation: shake 1.5s linear 1.5s infinite;
+  width: 25px;
 }
 .form-active-button {
   padding:10px 15px;
   background-color: #f26739;
   color: #fff;
-  border-color:#f26739;
-  border-radius: 15px;
+  border-color:#000;
+  border-radius: 15px 0px 0px 15px;
   vertical-align: middle;
-  border-width: 0;
+  border-width: 3px 0px 3px 3px;
   font-weight: 700;
   line-height: 1.2;
   font-size: 25px;
@@ -139,6 +149,14 @@ img.phone-cont-img {
   width: 50px;
 }
 .darkTheme {
+  background-color: #121111;
+  color: white !important;
+}
+.darkTheme .phone .link-text{
+  background-color: #121111;
+  color: white !important;
+}
+.darkTheme .footer-link-wrapper a {
   background-color: #121111;
   color: white !important;
 }
@@ -296,7 +314,7 @@ img.phone-cont-img {
   display: flex;
   padding: 20px;
   position: relative;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
 }
 .about .text-we.about-left,
 .uslugi .text-we.about-left {
@@ -610,6 +628,9 @@ img.phone-cont-img {
   position: relative;
 }
 .contacts .invert {
+  filter: invert(75%);
+}
+.phone-head .invert {
   filter: invert(75%);
 }
 .owl-nav button.owl-prev {
