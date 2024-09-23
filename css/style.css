@@ -19,6 +19,9 @@ body {
   align-items: center;
   margin: 20px;
 }
+.m-visible {
+  display: none;
+}
 .button-wrapper-fixed {
   display: flex;
   justify-content: center;
@@ -28,6 +31,7 @@ body {
   z-index: 9;
   bottom: 100px;
   right: 1%;
+  background-color: transparent!important;
 }
 .cont-img {
   animation: shake 1.5s linear 1.5s infinite;
@@ -47,7 +51,7 @@ body {
   align-items: center;
 }
 .contact-us {
-  width: 75px;
+  width: 60px;
 }
 .btn-text {
   line-height: 1.2;
@@ -166,10 +170,15 @@ img.phone-cont-img {
   background-color: #121111;
   color: white !important;
 }
-.darkTheme .footer-link-wrapper a {
+.darkTheme .footer-link-wrapper  a {
   background-color: #121111;
   color: white !important;
 }
+.darkTheme .footer-link-wrapper  a span.link-text{
+  background-color: #121111;
+  color: white !important;
+}
+
 .darkTheme .btn-text{
   background-color: #121111;
   color: white !important;
@@ -811,6 +820,10 @@ img.phone-cont-img {
     padding: 20px;
     text-align: center;
   }
+
+  .widePrice a {
+    font-size: 16px;
+  }
   .uslugi .row-box,
   .about .row-box{
     padding: 20px;
@@ -860,12 +873,15 @@ img.phone-cont-img {
   font-size: 65px;
 }
 .contact-us {
-  width: 50px;
+  width: 60px;
 }
 } 
 @media (max-width: 465px) {
   .stat-1 h3 {
     font-size: 14px;
+  }
+  .m-visible {
+    display: block;
   }
   .box-img {
     width: 200px;
