@@ -22,27 +22,37 @@ body {
 .button-wrapper-fixed {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: fixed;
   z-index: 9;
-  bottom: 95px;
-  right: 0;
+  bottom: 100px;
+  right: 1%;
 }
 .cont-img {
   animation: shake 1.5s linear 1.5s infinite;
   width: 25px;
 }
 .form-active-button {
-  padding:10px 15px;
   background-color: #f26739;
   color: #fff;
-  border-color:#000;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color:#fff;
   vertical-align: middle;
-  border-width: 3px 0px 3px 3px;
-  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-us {
+  width: 75px;
+}
+.btn-text {
   line-height: 1.2;
-  font-size: 25px;
+  font-size: 15px;
+  font-weight: 700;
 }
 .modal {
   display: none;
@@ -160,6 +170,10 @@ img.phone-cont-img {
   background-color: #121111;
   color: white !important;
 }
+.darkTheme .btn-text{
+  background-color: #121111;
+  color: white !important;
+}
 .main {
   max-width: 1170px;
   display: flex;
@@ -167,6 +181,7 @@ img.phone-cont-img {
   align-items: center;
   justify-content: center;
 }
+
 .main .btn-up {
   position: fixed;
   z-index: 9;
@@ -843,6 +858,9 @@ img.phone-cont-img {
 .owl-carousel .owl-next span,
 .owl-carousel .owl-prev span{
   font-size: 65px;
+}
+.contact-us {
+  width: 50px;
 }
 } 
 @media (max-width: 465px) {

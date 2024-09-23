@@ -8,6 +8,7 @@ const phoneHead = document.querySelector('.phone-head');
 const footerContacts = document.querySelector('.footer-contacts-wrapper');
 const navUnit = document.querySelectorAll('.nav-unit');
 const contImg = document.querySelectorAll('.cont-img');
+const contantUs = document.querySelectorAll('.button-wrapper-fixed');
 const footerNav = document.querySelectorAll('.footer-nav');
 const cards = document.querySelectorAll('.card'); //Все карточки цен
 const priceBorder = document.querySelectorAll('.card-price')//полоса над ценой
@@ -20,6 +21,7 @@ const themeSwitch = (e) => {
     phoneHead.classList.toggle('darkTheme') // Переключение телефона
     footerContacts.classList.toggle('darkTheme') // Переключение телефона
     navUnit.forEach(e => e.classList.toggle('darkTheme')) // Пункты навиг
+    contantUs.forEach(e => e.classList.toggle('darkTheme'))
     contImg.forEach(e => e.classList.toggle('invert')) // Иконки в футере
     footerNav.forEach(e => e.classList.toggle('invert'))
     cards.forEach(e => e.classList.toggle('cardDark')) // Переключаем карточки на темную тему
