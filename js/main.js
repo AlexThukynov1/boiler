@@ -12,6 +12,7 @@ const contantUs = document.querySelectorAll('.button-wrapper-fixed');
 const footerNav = document.querySelectorAll('.footer-nav');
 const cards = document.querySelectorAll('.card'); //Все карточки цен
 const priceBorder = document.querySelectorAll('.card-price')//полоса над ценой
+const priceBox = document.getElementById('priceBox');
 
 
 const themeSwitch = (e) => {
@@ -79,7 +80,7 @@ var modal = document.getElementById("contactFormModal");
 var openBtn = document.querySelector(".themeHandler");
 var closeBtn = document.getElementsByClassName("close")[0];
 var form = document.getElementById("contactForm");
-console.log(openBtn)
+console.log(priceBox)
 // Відкриття форми при кліку на кнопку
 openBtn.onclick = function(e) {
   if(e.target.id === 'openFormBtn'){
@@ -87,7 +88,11 @@ openBtn.onclick = function(e) {
   }
   
 }
-
+priceBox.onclick = function(e) {
+  if (e.target !== cards) {
+    modal.style.display = "block";
+  }
+}
 // Закриття форми при кліку на хрестик
 closeBtn.onclick = function() {
   modal.style.display = "none";
@@ -103,25 +108,26 @@ window.onclick = function(event) {
 // Відправка форми на сервер
 function submitForm() {
   var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
   var message = document.getElementById("message").value;
   var address = document.getElementById("address").value;
 
-  if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+  if (name.trim() === "" || phone.trim() === "" || message.trim() === "") {
     alert("Please fill out all fields.");
     return;
   }
 
+
   // Створення об'єкту FormData для відправки даних на сервер
   var formData = new FormData();
   formData.append('name', name);
-  formData.append('email', email);
+  formData.append('phone', phone);
   formData.append('message', message);
   formData.append('address', address);
 
   // Відправлення POST-запиту на сервер PHP
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'send_email.php', true);
+  xhr.open('POST', 'send_phone.php', true);
   xhr.onload = function() {
     // Додаткові дії після успішної відправки форми, якщо потрібно
     modal.style.display = "none"; // Закриття форми
