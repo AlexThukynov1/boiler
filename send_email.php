@@ -8,8 +8,8 @@ $message = $_POST['message'];
 // Тут можна виконати відправку електронного листа або зберегти дані у базу даних, якщо потрібно
 
 // Приклад відправки електронного листа (встановіть правильні налаштування)
-// $to = "proservice.ukr@gmail.com";
-$to = "alexthukynov@gmail.com";
+$to = "proservice.ukr@gmail.com";
+// $to = "alexthukynov@gmail.com";
 $subject = "New Message from Contact Form";
 $body = "Name: $name;
 $address\nPhone: $email\nMessage: $message";
