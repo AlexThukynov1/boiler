@@ -127,7 +127,7 @@ function submitForm() {
 
   // Відправлення POST-запиту на сервер PHP
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'send_phone.php', true);
+  xhr.open('POST', 'send_emailS.php', true);
   xhr.onload = function() {
     // Додаткові дії після успішної відправки форми, якщо потрібно
     modal.style.display = "none"; // Закриття форми
