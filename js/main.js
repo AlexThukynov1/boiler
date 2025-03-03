@@ -80,7 +80,6 @@ var modal = document.getElementById("contactFormModal");
 var openBtn = document.querySelector(".themeHandler");
 var closeBtn = document.getElementsByClassName("close")[0];
 var form = document.getElementById("contactForm");
-console.log(priceBox)
 // Відкриття форми при кліку на кнопку
 openBtn.onclick = function(e) {
   if(e.target.id === 'openFormBtn'){
