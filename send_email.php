@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $to = "proservice.ukr@gmail.com";
     $subject = "Нове повідомлення з форми зворотного зв'язку";
-    $body = "Ім'я: " . $name . "\n" .
-        "Адреса: " . $address . "\n" .
-        "Телефон: " . $phone . "\n" .
-        "Повідомлення: " . $message;
+    $body = "Телефон: " . $phone . "\n" .
+            "Ім'я: " . $name . "\n" .
+            "Адреса: " . $address . "\n" .
+            "Повідомлення: " . $message;
 
     $headers = "From: proservice.net.ua"; 
 
